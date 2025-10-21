@@ -1,20 +1,3 @@
-/*
- * This file is part of INAV.
- *
- * INAV is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * INAV is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with INAV.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 #define USE_TARGET_CONFIG
 
 #define TARGET_BOARD_IDENTIFIER "FRF4WM"
@@ -44,6 +27,9 @@
 
 #define USE_BARO
 #define BARO_I2C_BUS            BUS_I2C1
+#define USE_BARO_BMP280
+#define USE_BARO_MS5611
+#define USE_BARO_DPS310
 #define USE_BARO_SPL06
 
 #define USE_MAG
@@ -86,12 +72,6 @@
 #define ADC1_DMA_STREAM             DMA2_Stream4
 #define ADC_CHANNEL_1_PIN           PC4
 #define VBAT_ADC_CHANNEL            ADC_CHN_1
-
-// *************** PINIO ***************************
-#define USE_PINIO
-#define USE_PINIOBOX
-#define PINIO1_PIN                  PA4
-#define PINIO2_PIN                  PB5
 
 // *************** others  ************************
 #define DEFAULT_FEATURES   (FEATURE_OSD | FEATURE_TELEMETRY | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TX_PROF_SEL | FEATURE_BLACKBOX)
