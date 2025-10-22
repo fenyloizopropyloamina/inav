@@ -1,3 +1,21 @@
+/*
+ * This file is part of INAV.
+ *
+ * INAV is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * INAV is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with INAV.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
 #define USE_TARGET_CONFIG
 
 #define TARGET_BOARD_IDENTIFIER "FRF4WM"
@@ -27,10 +45,10 @@
 
 #define USE_BARO
 #define BARO_I2C_BUS            BUS_I2C1
+#define USE_BARO_SPL06
 #define USE_BARO_BMP280
 #define USE_BARO_MS5611
 #define USE_BARO_DPS310
-#define USE_BARO_SPL06
 
 #define USE_MAG
 #define MAG_I2C_BUS             BUS_I2C1
@@ -48,6 +66,10 @@
 #define UART1_TX_PIN            PA9
 #define UART1_RX_PIN            PA10
 
+#define USE_UART2
+#define UART2_TX_PIN            PA2
+#define UART2_RX_PIN            PA3
+
 #define USE_UART4
 #define UART4_TX_PIN            PA0
 #define UART4_RX_PIN            PA1
@@ -60,7 +82,7 @@
 #define SOFTSERIAL_1_TX_PIN      PA2
 #define SOFTSERIAL_1_RX_PIN      PA2
 
-#define SERIAL_PORT_COUNT       5
+#define SERIAL_PORT_COUNT       6
 
 #define DEFAULT_RX_TYPE         RX_TYPE_SERIAL
 #define SERIALRX_PROVIDER       SERIALRX_CRSF
